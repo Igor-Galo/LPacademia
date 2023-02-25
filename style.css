@@ -259,7 +259,7 @@ main {
         top: 0;
         padding-top: 20px;
         padding-left: 10px;
-        background-color: slategrey;
+        background-color:rgb(35, 35, 35);
         transition: all 0.4s ease;
         align-items: center;
         justify-content: center;
@@ -278,26 +278,27 @@ main {
     }
 
     .menu .logo-toggle{
+        font-size: 32px;
         display: block;
-        width: 75%;
+        width: 90%;
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
 
     .logo-toggle .siderbarClose{
-        font-size: 24px;
+        font-size: 32px;
         cursor: pointer;
     }
 
     .nav-bar .nav-links{
         max-width: 100vh;
-        width: 85%;
+        width: 100%;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         padding-top: 7vh;
-        font-size: 20px;
+        font-size: 24px;
     }
     
     .nav-links li a{

@@ -1,22 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     max-width: 1900px;
     max-height: 1080px;
-    width: 100% ;
-    height: 100%    ;
+    width: 100%;
+    height: 100%;
     font-size: 62.5%;
-    color: white    ;
+    color: white;
     font-family: 'lato', 'poppins', sans-serif;
 }
 
-body{
+body {
     background: linear-gradient(rgba(17, 17, 17, 0.8), rgba(20, 20, 20, 1)), url(/img/High_resolution_wallpaper_background_ID_77701968127.jpg);
     background-position: center center;
     background-size: cover;
@@ -26,13 +26,13 @@ body{
 
 /* CONTEUDO DO HEADER */
 
-header{
+nav {
     width: 100%;
     height: 7vh;
     background-color: rgba(22, 22, 22, 0.1);
 }
 
-.menu-content {
+.nav-bar {
     text-transform: uppercase;
     height: 100%;
     display: flex;
@@ -41,19 +41,31 @@ header{
     font-size: 1.8rem;
 }
 
-.logo{
+nav .nav-bar .siderbarOpen{
+    color: white;
+    font-size: 25px;
+    padding: 5px;
+    cursor: pointer;
+    display: none; 
+}
+
+.logo {
     font-size: 1.8rem;
     letter-spacing: 0.5rem;
     cursor: pointer;
 }
 
-.menu-content .list-itens{
+.menu .logo-toggle{
+    display: none;
+}
+
+.nav-bar .nav-links {
     display: flex;
     list-style: none;
     gap: 5px;
 }
 
-.menu-content .list-itens a{
+.nav-bar .nav-links a {
     text-decoration: none;
     color: white;
     padding: 1.5rem;
@@ -61,7 +73,7 @@ header{
     position: relative;
 }
 
-.menu-content .list-itens a:before{
+.nav-bar .nav-links a:before {
     content: '';
     position: absolute;
     bottom: 0;
@@ -72,24 +84,24 @@ header{
     transition: all 0.5s ease;
 }
 
-.menu-content .list-itens a:hover:before{
+.nav-bar .nav-links a:hover:before {
     width: 100%;
 }
 
-.menu-content .list-itens .icon{
+.nav-bar .nav-links .icon {
     font-size: 2rem;
 }
 
 /* CONTEUDO PRINCIPAL/CENTRO */
 
-main{
+main {
     height: 93vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.main-content{
+.main-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -105,7 +117,7 @@ main{
     text-align: center;
 }
 
-.second-text{
+.second-text {
     margin-bottom: 7rem;
     font-size: 2rem;
     color: rgb(165, 165, 165);
@@ -113,18 +125,18 @@ main{
     text-transform: uppercase;
 }
 
-.btns{
+.btns {
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
-.btns button:hover{
+.btns button:hover {
     color: yellow;
     border: none;
 }
 
-.btns button{
+.btns button {
     width: 250px;
     height: 60px;
     cursor: pointer;
@@ -139,7 +151,7 @@ main{
     transition: 1.5s;
 }
 
-.btns button:before{
+.btns button:before {
     content: '';
     bottom: 0;
     left: 0;
@@ -152,6 +164,226 @@ main{
     transition: 1s;
 }
 
-.btns button:hover:before{
+.btns button:hover:before {
     width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+    body {
+        background: linear-gradient(rgba(17, 17, 17, 0.8), rgba(20, 20, 20, 1)), url(/img/High_resolution_wallpaper_background_ID_77701968127.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-position-y: 0px;
+        background-repeat: no-repeat;
+        max-height: 1400px;
+        height: 100%;
+    }
+
+    main {
+        height: 93vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-height: 1400px;
+    }
+
+    nav {
+        width: 100%;
+        height: 7vh;
+        background-color: rgba(22, 22, 22, 0.1);
+    }
+
+    .menu-content {
+        text-transform: uppercase;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 1.4rem;
+    }
+
+    .primary-text {
+        width: 650px;
+        font-size: 4.5rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    .second-text {
+        margin-bottom: 6.5rem;
+        font-size: 1.5rem;
+        color: rgb(165, 165, 165);
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .primary-text {
+        width: 550px;
+        font-size: 4rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .second-text {
+        margin-bottom: 6rem;
+        font-size: 1rem;
+        color: rgb(165, 165, 165);
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .nav-bar .nav-links a {
+        text-decoration: none;
+        color: white;
+        padding: 1rem;
+        transform: 10ms ease-in;
+        position: relative;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    nav .nav-bar .siderbarOpen{
+        display: block; 
+    }
+
+    .menu{
+        z-index: 100;
+        position: fixed;
+        max-width: 100vh;
+        height: 100%;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        padding-top: 20px;
+        padding-left: 10px;
+        background-color: slategrey;
+        transition: all 0.4s ease;
+        align-items: center;
+        justify-content: center;
+    }
+    ul .nav-links{
+        align-items: center;
+        justify-content: center;
+        max-width: 100vh;
+        height: 100%;
+        width: 100%;
+
+    }
+
+    nav.active .menu{
+        left: -0%;
+    }
+
+    .menu .logo-toggle{
+        display: block;
+        width: 75%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo-toggle .siderbarClose{
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .nav-bar .nav-links{
+        max-width: 100vh;
+        width: 85%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 7vh;
+        font-size: 20px;
+    }
+    
+    .nav-links li a{
+        display: block;
+        margin-top: 20px;
+    }
+    .nav-bar{
+        max-width: 100vh;
+        width: 75%;
+    }
+
+    .logo{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding-left: 70px;
+    }
+
+    main{
+        max-width: 100vh;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        align-items:flex-start;
+        padding-top: 7vh;
+        margin-bottom: 1.5rem;
+        
+    }
+    
+    .primary-text {
+        font-size: 4rem;
+        width: 75%;
+        height: 244px;
+        text-align:center;
+    }
+    
+    .second-text {
+        margin-top: 5rem;
+        margin-bottom: 7rem;
+        font-size: 1.8rem;
+        color: rgb(165, 165, 165);
+        text-align: center;
+        text-transform: uppercase;
+    }
+    
+    .btns {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .btns button:hover {
+        color: yellow;
+        border: none;
+    }
+    
+    .btns button {
+        width: 150px;
+        height: 50px;
+        cursor: pointer;
+        border: 1px solid white;
+        color: white;
+        text-transform: uppercase;
+        background-color: transparent;
+        font-weight: bold;
+        letter-spacing: 0.10rem;
+        border-radius: 20px;
+        position: relative;
+        transition: 1.5s;
+    }
+    
+    .btns button:before {
+        content: '';
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        border-radius: 20px;
+        width: 0;
+        height: 60px;
+        background-color: rgb(61, 61, 61);
+        z-index: -1;
+        transition: 1s;
+    }
+    
+    .btns button:hover:before {
+        width: 100%;
+    }
+    
 }
